@@ -49,3 +49,17 @@ treemap.c:42:22: error: invalid type argument of unary ‘*’ (have ‘int’)
                       ^~~
 Compilation failed
 7c2f5d8
+Thu Apr 21 18:02:16 UTC 2022: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘createTreeMap’:
+treemap.c:42:19: error: assignment makes pointer from integer without a cast [-Werror=int-conversion]
+   map->lower_than = (lt);
+                   ^
+treemap.c:42:19: error: ‘lt’ is used uninitialized in this function [-Werror=uninitialized]
+   map->lower_than = (lt);
+   ~~~~~~~~~~~~~~~~^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+44a9f22
