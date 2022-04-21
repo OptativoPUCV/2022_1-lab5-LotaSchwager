@@ -1,0 +1,16 @@
+Thu Apr 21 17:55:19 UTC 2022: 
+ treemap.c | 22 +++++++++++++++++++---
+ 1 file changed, 19 insertions(+), 3 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘createTreeMap’:
+treemap.c:45:35: error: ‘key1’ undeclared (first use in this function); did you mean ‘key_t’?
+   int resultado = map->lower_than(key1,key2);
+                                   ^~~~
+                                   key_t
+treemap.c:45:35: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:45:40: error: ‘key2’ undeclared (first use in this function); did you mean ‘key1’?
+   int resultado = map->lower_than(key1,key2);
+                                        ^~~~
+                                        key1
+Compilation failed
+7c4b98d
