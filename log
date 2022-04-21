@@ -39,3 +39,13 @@ treemap.c:42:19: error: ‘lt’ is used uninitialized in this function [-Werror
 cc1: all warnings being treated as errors
 Compilation failed
 32dbc05
+Thu Apr 21 18:01:58 UTC 2022: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘createTreeMap’:
+treemap.c:42:22: error: invalid type argument of unary ‘*’ (have ‘int’)
+   map->lower_than = (*lt);
+                      ^~~
+Compilation failed
+7c2f5d8
