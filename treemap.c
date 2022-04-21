@@ -83,16 +83,16 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
 
      if (key > nodeKey->pair->key){
        nodeKey = nodeKey->right;
-       
-       if ((is_equal (tree,key,nodeKey->pair->key)) == 1){
+       if (nodeKey == NULL)  break;
+       if ((is_equal (tree,key,nodeKey->pair->key)) != 0){
           tree->current = nodeKey;
           return nodeKey->pair;
         }
      }
      else{
        nodeKey = nodeKey->left;
-       if (nodeKey = NULL)  break;
-       if ((is_equal (tree,key,nodeKey->pair->key)) == 1){
+       if (nodeKey == NULL)  break;
+       if ((is_equal (tree,key,nodeKey->pair->key)) != 0){
           tree->current = nodeKey;
           return nodeKey->pair;
         }
