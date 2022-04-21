@@ -69,3 +69,23 @@ Thu Apr 21 18:03:09 UTC 2022:
  tests:  4|7
 total_score: 5/70
 3262d1a
+Thu Apr 21 20:02:30 UTC 2022: 
+ treemap.c | 27 ++++++++++++++++++++++++++-
+ 1 file changed, 26 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:79:13: error: return from incompatible pointer type [-Werror=incompatible-pointer-types]
+      return nodeKey;
+             ^~~~~~~
+treemap.c:88:18: error: return from incompatible pointer type [-Werror=incompatible-pointer-types]
+           return nodeKey;
+                  ^~~~~~~
+treemap.c:95:18: error: return from incompatible pointer type [-Werror=incompatible-pointer-types]
+           return nodeKey;
+                  ^~~~~~~
+treemap.c:99:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+8cf2462
