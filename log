@@ -152,3 +152,9 @@ Sun Apr 24 15:48:37 UTC 2022:
  tests:  8|7
 total_score: 5/70
 b7dc14d
+Sun Apr 24 16:37:56 UTC 2022: 
+ treemap.c | 12 ++++++++----
+ 1 file changed, 8 insertions(+), 4 deletions(-)
+ tests:  8|7
+total_score: 5/70
+4882a39
