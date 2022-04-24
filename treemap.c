@@ -52,11 +52,10 @@ TreeNode * minimum(TreeNode * x){
   
   if (aux == NULL) return NULL;
   
-  while (aux->root != NULL){
-    if (aux->left == NULL) return aux;
+  while (aux->left != NULL){
     aux = aux->left;
   }
-  return NULL;
+  return aux;
 }
 
 
