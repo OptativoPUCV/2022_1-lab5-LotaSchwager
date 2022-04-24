@@ -79,25 +79,23 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
      return nodeKey->pair;
    }
   
-  while (nodeKey != NULL){  
-    
-    if (key > nodeKey->pair->key){
-      if (nodeKey->right == NULL) break;
-      nodeKey = nodeKey->right;
-    }
-
-    if (key < nodeKey->pair->key){
-      if (nodeKey->left == NULL) break;
-      nodeKey = nodeKey->left;
-    }
+  while (nodeKey != NULL){
 
     if ((is_equal(tree,key,nodeKey->pair->key)) == 1){
       tree->current = nodeKey;
       return nodeKey->pair;
     }
     
+    if (key > nodeKey->pair->key){
+      if (nodeKey->right == NULL) return NULL;
+      nodeKey = nodeKey->right;
+    }
+
+    if (key < nodeKey->pair->key){
+      if (nodeKey->left == NULL) return NULL;
+      nodeKey = nodeKey->left;
+    }
   }
-  return NULL;
 }
 
 
