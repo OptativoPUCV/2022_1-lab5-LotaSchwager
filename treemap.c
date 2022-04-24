@@ -90,14 +90,14 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
     }
 
     if ((is_equal (tree,key,nodeKey->pair->key)) == 0){
-      if (nodeKey->right == NULL) return NULL;
       nodeKey = nodeKey->right;
     }
 
     if ((is_equal (tree,key,nodeKey->pair->key)) == 2){
-      if (nodeKey->left == NULL) return NULL;
       nodeKey = nodeKey->left;
     }
+
+    if (nodeKey == NULL) return NULL;
   }
   return NULL;
 }
