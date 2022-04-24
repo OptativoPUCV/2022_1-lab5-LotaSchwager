@@ -22,10 +22,7 @@ struct TreeMap {
 int is_equal(TreeMap* tree, void* key1, void* key2){
     if(tree->lower_than(key1,key2)==0 &&  
         tree->lower_than(key2,key1)==0) return 1;//keys iguales
-
-    if (tree->lower_than(key1,key2)<0)return 2;//key2 menor que key1
-  
-    return 0;
+    else return 0;
 }
 
 TreeNode * createTreeNode(void* key, void * value) {
@@ -88,16 +85,16 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
       tree->current = nodeKey;
       return nodeKey->pair;
      }    
-      
-     if ((is_equal (tree,key,nodeKey->pair->key)) == 0){
+
+     if (key > nodeKey->pair->key){
        nodeKey = nodeKey->right;
      }
 
-     if ((is_equal (tree,key,nodeKey->pair->key)) == 2){
-      nodeKey = nodeKey->left;
+     if (key < nodeKey->pair->key){
+       nodeKey = nodeKey->left;
      }
 
-     if (nodeKey->right == NULL && nodeKey->left == NULL) return NULL;
+     if (nodeKey == NULL) return NULL;
   }
   return NULL;
 }
