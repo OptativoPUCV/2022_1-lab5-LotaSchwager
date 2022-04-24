@@ -52,10 +52,9 @@ TreeNode * minimum(TreeNode * x){
   
   if (aux == NULL) return NULL;
   
-  while (aux != NULL){
+  while (aux->root != NULL){
+    if (aux->left == NULL) return aux;
     aux = aux->left;
-
-    if (aux == NULL) return aux->parent;
   }
   return NULL;
 }
@@ -110,11 +109,12 @@ Pair * upperBound(TreeMap * tree, void* key) {
 }
 
 Pair * firstTreeMap(TreeMap * tree) {
-  TreeNode * aux = tree->root;
+  TreeNode * aux = minimun(tree->root);
 
-  if (aux == NULL) return NULL;
+  tree->current = aux;
+  return aux;
 
-  return aux->pair;
+  
 }
 
 Pair * nextTreeMap(TreeMap * tree) {

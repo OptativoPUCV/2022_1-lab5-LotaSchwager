@@ -278,3 +278,23 @@ Sun Apr 24 18:08:56 UTC 2022:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 2ccc6ec
+Sun Apr 24 18:13:50 UTC 2022: 
+ treemap.c | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘minimum’:
+treemap.c:55:13: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘root’
+   while (aux->root != NULL){
+             ^~
+treemap.c: In function ‘firstTreeMap’:
+treemap.c:112:20: error: implicit declaration of function ‘minimun’; did you mean ‘minimum’? [-Werror=implicit-function-declaration]
+   TreeNode * aux = minimun(tree->root);
+                    ^~~~~~~
+                    minimum
+treemap.c:112:20: error: initialization makes pointer from integer without a cast [-Werror=int-conversion]
+treemap.c:115:10: error: return from incompatible pointer type [-Werror=incompatible-pointer-types]
+   return aux;
+          ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+3b39441
