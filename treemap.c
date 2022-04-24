@@ -88,13 +88,15 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
     
     if (key > nodeKey->pair->key){
       if (nodeKey->right == NULL) return NULL;
-      nodeKey = nodeKey->left;
+      nodeKey = nodeKey->right;
     }
 
     if (key < nodeKey->pair->key){
       if (nodeKey->left == NULL) return NULL;
-      nodeKey = nodeKey->right;
+      nodeKey = nodeKey->left;
     }
+
+    if (nodeKey == NULL) return NULL;
   }
   return NULL;
 }
