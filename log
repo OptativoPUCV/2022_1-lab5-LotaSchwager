@@ -375,3 +375,9 @@ treemap.c:97:12: error: expected identifier before ‘)’ token
             ^
 Compilation failed
 73edb3a
+Sun Apr 24 23:23:20 UTC 2022: 
+ treemap.c | 34 ++++++++++++++++++++++++++++++----
+ 1 file changed, 30 insertions(+), 4 deletions(-)
+ tests:  17|3
+total_score: 30/70
+0422c9f
