@@ -110,7 +110,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
 Pair * firstTreeMap(TreeMap * tree) {
   TreeNode * aux = minimum(tree->root);
 
-  tree->current = aux->pair;
+  tree->current = aux;
   return aux->pair;
 
   
