@@ -96,8 +96,8 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
       nodeKey = nodeKey->left;
     }
   }
+  return NULL;
 }
-
 
 Pair * upperBound(TreeMap * tree, void* key) {
     return NULL;
