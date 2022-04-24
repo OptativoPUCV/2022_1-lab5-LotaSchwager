@@ -55,7 +55,7 @@ TreeNode * minimum(TreeNode * x){
   while (aux != NULL){
     aux = aux->left;
 
-    if (aux == NULL) return NULL;
+    if (aux == NULL) return aux->parent;
   }
   return NULL;
 }
