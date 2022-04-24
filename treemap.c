@@ -89,8 +89,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
      if (key > nodeKey->pair->key){
        nodeKey = nodeKey->right;
      }
-
-     if (key < nodeKey->pair->key){
+     else{
        nodeKey = nodeKey->left;
      }
 
