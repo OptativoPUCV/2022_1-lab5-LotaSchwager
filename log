@@ -381,3 +381,17 @@ Sun Apr 24 23:23:20 UTC 2022:
  tests:  17|3
 total_score: 30/70
 0422c9f
+Sun Apr 24 23:24:53 UTC 2022: 
+ treemap.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘removeNode’:
+treemap.c:95:28: error: statement with no effect [-Werror=unused-value]
+         node->parent->left == NULL;
+                            ^
+treemap.c:98:29: error: statement with no effect [-Werror=unused-value]
+         node->parent->right == NULL;
+                             ^
+cc1: all warnings being treated as errors
+Compilation failed
+d27d6d5
