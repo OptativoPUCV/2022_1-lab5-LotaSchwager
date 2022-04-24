@@ -256,3 +256,14 @@ Sun Apr 24 17:54:52 UTC 2022:
  tests:  8|7
 total_score: 5/70
 a561f1b
+Sun Apr 24 18:08:04 UTC 2022: 
+ treemap.c | 14 +++++++++++---
+ 1 file changed, 11 insertions(+), 3 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:97:41: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘pari’; did you mean ‘pair’?
+      if (tree->lower_than(key, nodeKey->pari->key) == 1){
+                                         ^~~~
+                                         pair
+Compilation failed
+3990053
