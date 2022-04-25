@@ -203,11 +203,15 @@ Pair * nextTreeMap(TreeMap * tree) {
     tree->current = minimo;
     return minimo->pair;
   }
-  /*else{
-    while (nodo != NULL){
-      
-    }
-  }*/
 
+  while (nodo != NULL){
+
+    if (tree->lower_than(nodo, nodo->parent) == 1)){
+      tree->current = nodo->parent;
+      return nodo->parent->pair;
+    }
+
+    nodo = nodo->parent;
+  }
   return NULL;
 }
