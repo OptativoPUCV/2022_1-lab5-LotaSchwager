@@ -193,14 +193,14 @@ Pair * upperBound(TreeMap * tree, void* key) {
       if (tree->lower_than(nodo->pair->key, aux) == 1 || aux == NULL){
          aux = nodo->pair->key;
       }
-      if (nodo->right == NULL) break;
-
-      nodo = nodo->right;
-    }
-    else{
       if (nodo->left == NULL) break;
 
       nodo = nodo->left;
+    }
+    else{
+      if (nodo->right == NULL) break;
+
+      nodo = nodo->right;
     }
   }
 
