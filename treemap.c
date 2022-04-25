@@ -132,7 +132,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
 
   //caso 2 hijos
   if (node->left != NULL && node->right != NULL){
-    treeNode * son = minimum(node->left);
+    treeNode * son = minimum(tree->root->right);
     node->pair->key = son->pair->key;
     node->pair->value = son->pair->value;
     removeNode(tree,son);

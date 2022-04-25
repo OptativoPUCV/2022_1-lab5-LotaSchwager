@@ -479,3 +479,30 @@ treemap.c:88:6: note: expected ‘TreeNode * {aka struct TreeNode *}’ but argu
 cc1: all warnings being treated as errors
 Compilation failed
 fcaafcd
+Mon Apr 25 00:02:51 UTC 2022: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘removeNode’:
+treemap.c:135:5: error: unknown type name ‘treeNode’; did you mean ‘TreeNode’?
+     treeNode * son = minimum(tree->root->right);
+     ^~~~~~~~
+     TreeNode
+treemap.c:135:22: error: initialization from incompatible pointer type [-Werror=incompatible-pointer-types]
+     treeNode * son = minimum(tree->root->right);
+                      ^~~~~~~
+treemap.c:136:26: error: request for member ‘pair’ in something not a structure or union
+     node->pair->key = son->pair->key;
+                          ^~
+treemap.c:137:28: error: request for member ‘pair’ in something not a structure or union
+     node->pair->value = son->pair->value;
+                            ^~
+treemap.c:138:21: error: passing argument 2 of ‘removeNode’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+     removeNode(tree,son);
+                     ^~~
+treemap.c:88:6: note: expected ‘TreeNode * {aka struct TreeNode *}’ but argument is of type ‘int *’
+ void removeNode(TreeMap * tree, TreeNode* node) {
+      ^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+63c0381
