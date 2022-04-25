@@ -206,12 +206,13 @@ Pair * nextTreeMap(TreeMap * tree) {
 
   while (nodo != NULL){
 
+    if (nodo->parent == NULL) return NULL;
     if ((tree->lower_than(nodo->pair->key, nodo->parent->pair->key) == 1)){
       tree->current = nodo->parent;
       return nodo->parent->pair;
     }
 
-    if (nodo->parent == NULL) return NULL;
+    
     nodo = nodo->parent;
   }
   return NULL;
