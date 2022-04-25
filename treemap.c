@@ -183,7 +183,18 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
 Pair * upperBound(TreeMap * tree, void* key) {
   Pair *search = searchTreeMap (tree,key);
   if (search != NULL) return search;
-  
+
+  TreeNode *nodo = tree->root;
+  while (nodo != NULL){
+
+    if ((tree->lower_than(nodo->pair->key, key) == 1){
+      return nodo->pair;
+    }
+
+    if (nodo->right == NULL) break;
+
+    nodo = nodo->right;
+  }
   return NULL;
 }
 
