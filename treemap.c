@@ -211,6 +211,7 @@ Pair * nextTreeMap(TreeMap * tree) {
       return nodo->parent->pair;
     }
 
+    if (nodo->parent == NULL) return NULL;
     nodo = nodo->parent;
   }
   return NULL;
