@@ -200,8 +200,14 @@ Pair * nextTreeMap(TreeMap * tree) {
   TreeNode *nodo = tree->current;
   if (nodo->right != NULL){
     TreeNode *minimo =  minimum(nodo->right);
+    tree->current = minimo;
     return minimo->pair;
   }
+  /*else{
+    while (nodo != NULL){
+      
+    }
+  }*/
 
   return NULL;
 }
