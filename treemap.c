@@ -190,11 +190,11 @@ Pair * upperBound(TreeMap * tree, void* key) {
   while (nodo != NULL){
 
     if ((tree->lower_than(key, nodo->pair->key) == 1)){
+      if (aux == NULL) aux = nodo;
+      
       if (tree->lower_than(nodo->pair->key, aux->pair->key) == 1 && aux != NULL){
          aux = nodo;
       }
-
-      if (aux == NULL) aux = nodo;
       
       if (nodo->left == NULL) break;
 
