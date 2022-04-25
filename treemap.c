@@ -185,18 +185,25 @@ Pair * upperBound(TreeMap * tree, void* key) {
   if (search != NULL) return search;
 
   TreeNode *nodo = tree->root;
+  TreeNode *aux = tree->root;
+  int resultado;
+  int guardado = 1000000000;
   while (nodo != NULL){
-
+      
     if ((tree->lower_than(key, nodo->pair->key) == 1)){
-      return nodo->pair;
+      resultado = nodo->pair->key - key;
+      if (resultado < guardado && resultado > 0){
+        guardado = resultado;
+        aux = nodo;
+      }
     }
-
-    if (nodo->right == NULL) break;
+    if (nodo->right == NULL && nodo->left == NULL) return NULL;
+    if (nodo->right == NULL) nodo = nodo->left;
 
     nodo = nodo->right;
-    
   }
-  return NULL;
+
+  return aux->pair;
 }
 
 Pair * firstTreeMap(TreeMap * tree) {
