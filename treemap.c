@@ -152,9 +152,6 @@ void eraseTreeMap(TreeMap * tree, void* key){
 
 }
 
-
-
-
 Pair * searchTreeMap(TreeMap * tree, void* key) {
    TreeNode * nodeKey = tree->root;
    
@@ -184,7 +181,10 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
 }
 
 Pair * upperBound(TreeMap * tree, void* key) {
-    return NULL;
+  Pair *search = searchTreeMap (tree,key);
+  if (search != NULL) return search;
+  
+  return NULL;
 }
 
 Pair * firstTreeMap(TreeMap * tree) {
@@ -211,8 +211,7 @@ Pair * nextTreeMap(TreeMap * tree) {
       tree->current = nodo->parent;
       return nodo->parent->pair;
     }
-
-    
+ 
     nodo = nodo->parent;
   }
   return NULL;
