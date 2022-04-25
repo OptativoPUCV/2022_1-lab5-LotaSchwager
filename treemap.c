@@ -202,4 +202,6 @@ Pair * nextTreeMap(TreeMap * tree) {
     TreeNode *minimo =  minimum(nodo->right);
     return minimo->pair;
   }
+
+  return NULL;
 }
